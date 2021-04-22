@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-logo">
+                <a href=""><img src="Images/Logo.png" alt=""></a>
+            </div>
+            <div class="nav-menu dropdown">
+                <a class="menu-item">Daftar Gudang<span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 21l-12-18h24z"/></svg></span></a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item active">Gudang 1</a>
+                    <a href="#" class="dropdown-item">Gudang 2</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="content">
+        <div class="container">
+            <input type="button" value="Add New Item" id="addButton" onclick="showInsertTable()">
+            <table class="hero" id="insert">
+                <tr>
+                    <td>
+                        <form autocomplete="off" onsubmit="onFormSubmit(event)">
+                            <div class="msuk">
+                                <label for="namaBarang">Nama Barang:</label>
+                                <input type="text" name="namaBarang" id="namaBarang" minlength="5" maxlength="500" required>
+                            </div>
+                            <div class="msuk">
+                                <label for="jmlBarang">Jumlah Barang:</label>
+                                <input type="number" name="jmlBarang" id="jmlBarang" min=1 max="1000000" required>
+                            </div>
+                            <div class="lokasiSty">
+                                <label for="lokasi">Lokasi:</label>
+                                <input type="text" name="lokasi" id="lokasi" minlength="5" maxlength="500" required>
+                            </div>
+                            <div class = "msuk">
+                                <label for="gbrBarang">Gambar Barang:</label>
+                                <input type="url" id="gbrBarang" placeholder="Insert Image Link Here">
+                            </div>
+                            <div class="form_action--button">
+                                <input type="submit" value="Submit">
+                                <input type="reset" value="Reset">
+                            </div>
+                        </form>
+                    </td>
+                    <td><input type="button" onclick="hideInsertTable()" value="X"></td>
+                </tr>
+            </table>
+            <div class="gudang active">
+                <h1>Gudang 1</h1>
+                <table class="list current input">
+                    <thead>
+                        <tr>
+                            <th>Nama Barang</th>
+                            <th>Jumlah Barang</th>
+                            <th>Lokasi</th>
+                            <th>Gambar Barang</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                    </tbody>
+                </table>
+                <table class="list">
+                    <thead>
+                        <tr>
+                            <th>Nama Barang</th>
+                            <th>Jumlah Barang</th>
+                            <th>Lokasi</th>
+                            <th>Gambar Barang</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                    </tbody>
+                </table>
+                <table class="list">
+                    <thead>
+                        <tr>
+                            <th>Nama Barang</th>
+                            <th>Jumlah Barang</th>
+                            <th>Lokasi</th>
+                            <th>Gambar Barang</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                    </tbody>
+                </table>
+            </div>
+            <div class="gudang">
+                <h1>Gudang 2</h1>
+                <table class="list2 current input">
+                    <thead>
+                        <tr>
+                            <th>Nama Barang</th>
+                            <th>Jumlah Barang</th>
+                            <th>Lokasi</th>
+                            <th>Gambar Barang</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                    </tbody>
+                </table>
+                <table class="list2">
+                    <thead>
+                        <tr>
+                            <th>Nama Barang</th>
+                            <th>Jumlah Barang</th>
+                            <th>Lokasi</th>
+                            <th>Gambar Barang</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                    </tbody>
+                </table>
+                <table class="list2">
+                    <thead>
+                        <tr>
+                            <th>Nama Barang</th>
+                            <th>Jumlah Barang</th>
+                            <th>Lokasi</th>
+                            <th>Gambar Barang</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <span><a id="left-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" fill="white"/></svg></a></span>
+                <p id="current-page">Page 1</p>
+                <span><a id="right-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" fill="white"/></svg></a></span>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="container">
+            <p>Copyright 2021 Resto. All Rights Reserved</p>
+        </div>
+    </section>
+    <script type="text/javascript" src="home.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+
+:root{
+    --black: #0D0F14;
+    --white: #F7F7F7;
+    --red: #9E4040;
+    --darkred: #7C0000;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    padding: 0 8rem;
+}
+
+#navbar .container{
+    min-height: 100px;
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-logo img{
+    max-width: 5rem;
+}
+
+.nav-logo, .nav-menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu-item{
+    font-size: 24px;
+    color: var(--white);
+    font-weight: bold;
+    margin-left: 3rem;
+    padding: 1rem 0;
+}
+
+.menu-item.selected{
+    border-bottom: 2px solid white;
+}
+
+.content-img img{
+    max-width: 30rem;
+}
+
+.content .container h1{
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form{
+    min-width: 500px;
+    padding: 2rem 4rem;
+    border-radius: 20px;
+    background-color: var(--darkred);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.form > *{
+    margin: 14px 0;
+}
+
+.form input{
+    border: none;
+    min-height: 40px;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.form >*:focus{
+    outline: none;
+}
+
+.form p span a{
+    color: rgb(76, 155, 219);
+}
+
+#btn{
+    background-color: #FF6969;
+    border: none;
+    min-height: 40px;
+    min-width: 250px;
+    border-radius: 20px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 14px auto;
+}
+
+#loginalert,#registeralert{
+    color: rgb(255, 79, 79);
+}
+
+#btn:hover{
+    background-color: black;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+.footer .container{
+    min-height: 100px;
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
